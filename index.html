@@ -103,6 +103,42 @@
     }
   </style>
 </head>
+  <script>
+    const redPillBtn = document.querySelector(".red-pill");
+    const terminalModal = document.getElementById("terminal-modal");
+    const terminalOutput = document.getElementById("terminal-output");
+  
+    const terminalLines = [
+      "> Connecting to mainframe...",
+      "> Loading resume...",
+      "> Injecting Python...",
+      "> System override detected.",
+      "> Reality distortion engaged.",
+      "> Opening resume..."
+    ];
+  
+    redPillBtn.addEventListener("click", (e) => {
+      e.preventDefault(); // не одразу переходить
+      terminalModal.style.display = "block";
+      terminalOutput.innerHTML = "";
+  
+      let index = 0;
+      const interval = setInterval(() => {
+        if (index < terminalLines.length) {
+          const line = document.createElement("p");
+          line.textContent = terminalLines[index];
+          terminalOutput.appendChild(line);
+          index++;
+        } else {
+          clearInterval(interval);
+          setTimeout(() => {
+            window.open(redPillBtn.href, "_blank");
+            terminalModal.style.display = "none";
+          }, 1000);
+        }
+      }, 600);
+    });
+  </script>
 <body>
   <canvas id="matrix"></canvas>
   <div class="overlay">
