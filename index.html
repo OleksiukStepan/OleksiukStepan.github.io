@@ -53,6 +53,21 @@
       background-color: #00ff00;
       color: black;
     }
+    .btn.red-pill {
+  animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+      }
+    }
   </style>
 </head>
 <body>
@@ -62,7 +77,7 @@
     <p>Backend Engineer. Pythonista. Still inside the simulation.</p>
     <div class="buttons">
       <a href="https://github.com/OleksiukStepan" target="_blank" class="btn">🔵 ↩ Back to GitHub</a>
-      <a href="https://github.com/OleksiukStepan/OleksiukStepan.github.io#:~:text=CV.Stepan%20Oleksiuk.Python%20Developer.pdf" target="_blank" class="btn">🔴 Take the Red Pill (Resume)</a>
+      <a href="https://github.com/OleksiukStepan/OleksiukStepan.github.io/raw/main/CV.Stepan_Oleksiuk.Python_Developer.pdf" target="_blank" class="btn red-pill">🔴 Take the Red Pill (Resume)</a>
     </div>
   </div>
   <script>
