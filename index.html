@@ -181,8 +181,12 @@
             terminalOutput.appendChild(morpheus);
     
             const resumeLink = document.createElement("p");
-            resumeLink.innerHTML = '👉 <a href="' + redPillBtn.href + '" target="_blank" style="color: #00ff00;">Click here to open resume</a>';
+            resumeLink.innerHTML = '👉 <a href="' + redPillBtn.href + '" target="_blank" style="color: #00ff00;">Click here to open resume</a>';">Click here to open resume</a>';
             terminalOutput.appendChild(resumeLink);
+    
+            const backLink = document.createElement("p");
+            backLink.innerHTML = '⬅️ <a href="https://OleksiukStepan.github.io" style="color: #00ff00;">Return to the Matrix</a>';
+            terminalOutput.appendChild(backLink);
           }, 1000);
         }
       }, 600);
