@@ -176,8 +176,13 @@
         } else {
           clearInterval(interval);
           setTimeout(() => {
-            window.open(redPillBtn.href, "_blank");
-            terminalModal.style.display = "none";
+            const morpheus = document.createElement("p");
+            morpheus.innerText = 'Morpheus: "Take this link… and see how deep the rabbit hole goes."';
+            terminalOutput.appendChild(morpheus);
+    
+            const resumeLink = document.createElement("p");
+            resumeLink.innerHTML = '👉 <a href="' + redPillBtn.href + '" target="_blank" style="color: #00ff00;">Click here to open resume</a>';
+            terminalOutput.appendChild(resumeLink);
           }, 1000);
         }
       }, 600);
