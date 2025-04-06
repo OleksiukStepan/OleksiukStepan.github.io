@@ -108,11 +108,10 @@
     <p>Backend Engineer. Pythonista. Still inside the simulation.</p>
     <div class="buttons">
       <a href="https://github.com/OleksiukStepan" target="_blank" class="btn blue-pill">🔵 ↩ Blue Pill (GitHub)</a>
-      <a href="https://drive.google.com/file/d/1TxPghO5lmXw-isoQNr7MyRpc_rWW_RUv/view?usp=sharing" target="_blank" class="btn red-pill">🔴 Red Pill (Resume)</a>
+      <a href="#" id="red-pill" class="btn red-pill">🔴 Red Pill (Resume)</a>
     </div>
   </div>
 
-  <!-- Terminal Modal -->
   <div id="terminal-modal" class="terminal-modal">
     <div class="terminal-content" id="terminal-output">
       <p>> Taking the red pill...</p>
@@ -150,9 +149,11 @@
     setInterval(draw, 33);
 
     // Terminal animation
-    const redPillBtn = document.querySelector(".red-pill");
+    const redPillBtn = document.getElementById("red-pill");
     const terminalModal = document.getElementById("terminal-modal");
     const terminalOutput = document.getElementById("terminal-output");
+    const resumeURL = "https://github.com/OleksiukStepan/OleksiukStepan.github.io/raw/main/CV.Stepan_Oleksiuk.Python_Developer.pdf";
+
     const terminalLines = [
       "> Connecting to mainframe...",
       "> Loading resume...",
@@ -176,18 +177,18 @@
         } else {
           clearInterval(interval);
           setTimeout(() => {
-        const morpheus = document.createElement("p");
-        morpheus.innerText = 'Morpheus: "Take this link… and see how deep the rabbit hole goes."';
-        terminalOutput.appendChild(morpheus);
+            const morpheus = document.createElement("p");
+            morpheus.innerText = 'Morpheus: "Take this link… and see how deep the rabbit hole goes."';
+            terminalOutput.appendChild(morpheus);
 
-        const resumeLink = document.createElement("p");
-        resumeLink.innerHTML = '👉 <a href="' + "https://drive.google.com/file/d/1TxPghO5lmXw-isoQNr7MyRpc_rWW_RUv/view?usp=sharing" + '" target="_blank" style="color: #00ff00;">Click here to open resume</a>';">Click here to open resume</a>';
-        terminalOutput.appendChild(resumeLink);
+            const resumeLink = document.createElement("p");
+            resumeLink.innerHTML = '👉 <a href="' + resumeURL + '" target="_blank" style="color: #00ff00;">Click here to open resume</a>';
+            terminalOutput.appendChild(resumeLink);
 
-        const backLink = document.createElement("p");
-        backLink.innerHTML = '⬅️ <a href="https://OleksiukStepan.github.io" style="color: #00ff00;">Return to the Matrix</a>';
-        terminalOutput.appendChild(backLink);
-      }, 1000);
+            const backLink = document.createElement("p");
+            backLink.innerHTML = '⬅️ <a href="https://OleksiukStepan.github.io" style="color: #00ff00;">Return to the Matrix</a>';
+            terminalOutput.appendChild(backLink);
+          }, 1000);
         }
       }, 600);
     });
