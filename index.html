@@ -54,7 +54,10 @@
       color: black;
     }
     .btn.red-pill {
-  animation: pulse 1.5s infinite;
+      animation: pulse 1.5s infinite;
+    }
+    .btn.blue-pill {
+      animation: bluePulse 1.5s infinite;
     }
 
     @keyframes pulse {
@@ -68,6 +71,18 @@
         box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
       }
     }
+    
+    @keyframes bluePulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+      }
+    }
   </style>
 </head>
 <body>
@@ -76,8 +91,8 @@
     <h1>> wake_up(Stepan)</h1>
     <p>Backend Engineer. Pythonista. Still inside the simulation.</p>
     <div class="buttons">
-      <a href="https://github.com/OleksiukStepan" target="_blank" class="btn">🔵 ↩ Back to GitHub</a>
-      <a href="https://drive.google.com/file/d/1TxPghO5lmXw-isoQNr7MyRpc_rWW_RUv/view?usp=sharing" target="_blank" class="btn red-pill">🔴 Take the Red Pill (Resume)</a>
+      <a href="https://github.com/OleksiukStepan" target="_blank" class="btn">🔵 ↩ Blue Pill (Back to GitHub)</a>
+      <a href="https://drive.google.com/file/d/1TxPghO5lmXw-isoQNr7MyRpc_rWW_RUv/view?usp=sharing" target="_blank" class="btn red-pill">🔴 Red Pill (Resume)</a>
     </div>
   </div>
   <script>
