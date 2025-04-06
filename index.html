@@ -33,6 +33,25 @@
     }
     .overlay p {
       font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .btn {
+      background-color: black;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s ease-in-out;
+    }
+    .btn:hover {
+      background-color: #00ff00;
+      color: black;
     }
   </style>
 </head>
@@ -41,6 +60,10 @@
   <div class="overlay">
     <h1>> wake_up(Stepan)</h1>
     <p>Backend Engineer. Pythonista. Still inside the simulation.</p>
+    <div class="buttons">
+      <a href="https://github.com/OleksiukStepan" target="_blank" class="btn">🔵 ↩ Back to GitHub</a>
+      <a href="https://github.com/OleksiukStepan/OleksiukStepan.github.io#:~:text=CV.Stepan%20Oleksiuk.Python%20Developer.pdf" target="_blank" class="btn">🔴 Take the Red Pill (Resume)</a>
+    </div>
   </div>
   <script>
     const canvas = document.getElementById("matrix");
